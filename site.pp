@@ -58,3 +58,7 @@ class sudo {
     source => "puppet://domU-12-31-38-00-40-E5.compute-1.internal/files/apps/sudo/sudoers"
   }
 }
+
+
+import 'templates.pp'
+import 'nodes.pp'
