@@ -1,5 +1,5 @@
 class baseapps {
-  $packagelist = [ "rubygems", "lv", "xosview", "emacs" ]
+  $packagelist = [ "rubygems", "lv", "xosview", "emacs", "zsh" ]
 
   package { $packagelist:
     ensure => installed

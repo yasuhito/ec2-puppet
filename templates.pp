@@ -1,5 +1,5 @@
 class baseclass {
-  include baseapps, sshd
+  include baseapps, sshd, test
 }
 
 
