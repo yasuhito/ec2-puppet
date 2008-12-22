@@ -1,13 +1,18 @@
 class baseclass {
-  include emacs
-  include ganglia-monitor
-  include oprofile
-  include xosview
-  include sudo
+  include baseapps, sshd
 }
+
 
 node default {
   include baseclass
+}
+
+
+class computenode {
+  include baseclass
+  include ganglia-monitor
+  include sudo
+  include oprofile
 }
 
 
