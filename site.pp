@@ -1,3 +1,5 @@
 import "classes/*"
+import "groups/*"
+import "users/*"
 import "templates.pp"
 import "nodes.pp"

@@ -1,6 +1,6 @@
 class virt_groups {
-  @group { "test":
-    gid => "2000",
+  @group { "operator":
+    gid => "37",
     ensure => present
   }
 }

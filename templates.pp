@@ -1,5 +1,6 @@
 class baseclass {
-  include baseapps, sshd, test
+  include baseapps, sshd
+  include operator
 }
 
 
