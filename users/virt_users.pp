@@ -1,3 +1,9 @@
+User {
+  provider => "useradd",
+  managehome => true,
+}
+
+
 class virt_users {
   @user { "yasuhito":
     ensure => "present",
@@ -6,5 +12,15 @@ class virt_users {
     comment => "Yasuhito Takamiya",
     home => "/home/yasuhito",
     shell => "/usr/bin/zsh",
+  }
+
+  @user { "test":
+    ensure => "present",
+    uid => "2000",
+    gid => "2000",
+    comment => "test user",
+    home => "/home/test",
+    shell => "/usr/bin/zsh",
+    password => "hoge",
   }
 }

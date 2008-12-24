@@ -3,4 +3,9 @@ class virt_groups {
     gid => "37",
     ensure => present
   }
+
+  @group { "test":
+    gid => "2000",
+    ensure => present
+  }
 }
