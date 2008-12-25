@@ -1,6 +1,5 @@
 User {
   provider => "useradd",
-  managehome => true,
 }
 
 
@@ -21,6 +20,21 @@ class virt_users {
     comment => "test user",
     home => "/home/test",
     shell => "/usr/bin/zsh",
-    password => "hoge",
+  }
+
+  @user { "test1":
+    ensure => "present",
+    uid => "2001",
+    gid => "2001",
+    comment => "test user",
+    home => "/home/test1",
+    shell => "/usr/bin/zsh",
   }
 }
+
+
+### Local variables:
+### mode: Puppet
+### coding: utf-8-unix
+### indent-tabs-mode: nil
+### End:
