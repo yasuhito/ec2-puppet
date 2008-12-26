@@ -1,7 +1,8 @@
-class test {
-  include virt_users, virt_groups
-
-  enable_user { "test1": password_hash => 'q1w2e3r4t5y6u7i8o9p0' }
+class test inherits virt_users {
+  include virt_groups
+  
+  realize Group[ "test" ]
+  
   disable_user { "test": }
 }
 

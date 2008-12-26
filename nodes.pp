@@ -1,3 +1,7 @@
+node 'domU-12-31-38-00-40-E5' {
+  include masternode
+}
+
 node 'domU-12-31-38-00-E4-81' {
   include computenode
 }

@@ -1,8 +1,3 @@
-User {
-  provider => "useradd",
-}
-
-
 class virt_users {
   @user { "yasuhito":
     ensure => "present",
@@ -13,6 +8,24 @@ class virt_users {
     shell => "/usr/bin/zsh",
   }
 
+  @user { "yasui":
+    ensure => "present",
+    uid => "1001",
+    gid => "1001",
+    comment => "Yuichiro Yasui",
+    home => "/home/yasui",
+    shell => "/bin/bash",
+  }
+
+  @user { "fujisawa":
+    ensure => "present",
+    uid => "1002",
+    gid => "1002",
+    comment => "Katsuki Fujisawa",
+    home => "/home/fujisawa",
+    shell => "/bin/bash",
+  }
+  
   @user { "test":
     ensure => "present",
     uid => "2000",

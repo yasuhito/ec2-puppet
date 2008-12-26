@@ -1,8 +1,11 @@
-class operator {
-  include virt_users, virt_groups
+class operator inherits virt_users {
+  realize Group[ "operator" ]
 
-  realize (
-    Group[ "operator" ],
-    User[ "yasuhito" ]
-  )
+  enable_user { "yasuhito":
+    password_hash => 'S0NaAKfoxTVRg'
+  }
+
+  User[ "yasuhito" ] {
+    groups => "operator",
+  }
 }

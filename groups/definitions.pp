@@ -10,8 +10,8 @@ define set_password( $hash ) {
         
 
 define enable_user( $password_hash ) {
-  realize User[ $name ]
   realize Group[ $name ]
+  realize User[ $name ]
   
   set_password { $name:
     hash => $password_hash
@@ -26,7 +26,8 @@ define enable_user( $password_hash ) {
     ensure => directory,
     require => [ User[ $name ], Group[ $name ] ],
     owner => $name,
-    group => $name
+    group => $name,
+    recurse => true,
   }
 }
 
